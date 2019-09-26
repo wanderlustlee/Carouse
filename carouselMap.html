@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="carouselMap.css"/>
+	</head>
+	<body>
+		 <div id="container"></div>
+		
+		 <div id="container2"></div>
+		 
+		 <div id="container3"></div>
+	<button type="button" name="leftButton">向左</button>
+	<button type="button" name="rightButton">向右</button>
+	<button type="button" name="stopButton">暂停</button>
+	<button type="button" name="restartButton">重启</button>
+	</body>
+	<script src="carouselMap.js"></script>
+	<script>
+		var carousel = new Carousel({
+		    containerArray: [document.getElementById("container"), document.getElementById("container2"), document.getElementById("container3")],
+		    imagesList: [
+				 "image/1.png",
+				 "image/2.png", 
+				 "image/3.png", 
+				 "image/4.png", 
+				 "image/5.png", 
+				 "image/6.png",
+			],
+			
+			slideNum: 1,
+			
+			displayNum: 1,
+			
+			autoSlide: false,
+			
+			intervalSeconds: 2,
+			
+			transitionDuration: 0.5,
+			
+			leftToRightSlide: true,
+			
+			mouseDrag: true,
+			
+			keyBoardEvent: true,
+			
+			recycleSlide: true,
+			
+			imageSize: {
+				width: 400
+			},
+			
+			buttonStyle: {
+				width: "30px",
+				height: "30px",
+				borderRadius: "50%",
+				borderWidth: "1px",
+				borderStyle: "solid",
+				borderColor: "mediumpurple",
+				backgroundColor: "transparent",
+				fontSize: "25px",
+				color: "#E9967A",
+				cursor: "pointer"
+			},
+			
+			pointStyle: {
+				marginRight: "5px",
+				width: "10px",
+				height: "10px",
+				borderWidth: "1px",
+				borderStyle: "solid",
+				borderColor: "white",
+				borderRadius: "50%",
+				backgroundColor: "transparent",
+				cursor: "pointer",
+				focusBackgroundColor: "orange",
+			}
+			
+		});
+		// carousel.destory(document.getElementById("container"));
+		// carousel.removeAllEvent(document.getElementById("container"));
+		
+	</script>
+</html>
